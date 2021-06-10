@@ -2,8 +2,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 	console.log("El documento esta listo para ejecutar código JS");
 
+	obtenerContenido();
 	generarContenido();
-
 })
 
 function generarContenido(){
@@ -17,4 +17,22 @@ function generarContenido(){
 	});
 
 	console.log(contador);
+}
+
+
+function obtenerContenido(){
+	const url = "https://bremdows.github.io/aprendamosjuntos/js/datos.json";
+
+	fetch(url)
+		.then(respuesta => respuesta.json() ) // * SIGNIFICA QUE ESPERAMOS UNA RESPUESTA EN FORMATO JSON
+		.then( datos => {
+
+			generarMarcadoHTML( datos );
+			
+		})		
+}
+
+function generarMarcadoHTML( datos ){
+
+	console.log(datos);
 }

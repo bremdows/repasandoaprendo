@@ -1,8 +1,7 @@
-{
-	"curso": [ 
-		{
-			"titulo": "Cálculo I",
-			"contenido": [
+[
+	{
+		"curso": "Cálculo I",
+		"contenido": [
 				{
 					"primeraUnidad": [
 						{
@@ -43,27 +42,27 @@
 					"segundaUnidad": [
 						{
 							"sesion": "Sesión I",
-							"enlace": ""
+							"enlace": "enlace"
 						},
 						{
 							"sesion": "Sesión II - Parte I",
-							"enlace": ""
+							"enlace": "enlace"
 						},
 						{
 							"sesion": "Sesión II - Parte II",
-							"enlace": ""
+							"enlace": "enlace"
 						},
 						{
 							"sesion": "Sesión III - Parte I",
-							"enlace": ""
+							"enlace": "enlace"
 						},
 						{
 							"sesion": "Sesión III - Parte II",
-							"enlace": ""
+							"enlace": "enlace"
 						},
 						{
 							"sesion": "Sesión IV",
-							"enlace": ""
+							"enlace": "enlace"
 						},
 						{
 							"sesion": "Sesión V",
@@ -128,16 +127,15 @@
 					]
 				}
 			]
-		},
-		{
-			"titulo" : "Física II",
-			"contenido": [
+	},
+	{
+		"curso": "Física II",
+		"contenido": [
 				{
 					"primeraUnidad": [
 						
 					]
 				}
 			]
-		}
-	]
-}
+	}
+]
