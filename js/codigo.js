@@ -38,11 +38,7 @@ function generarMarcadoHTML( datos ){
 	// let datos = [3, 45, 6 ];
 	datos.forEach( (materia) => {
 
-		materia.contenido.forEach( (silabo) => {
-
-			console.log(silabo.primeraUnidad)
-		})
-
+		console.log(materia);
 	})
 	
 }
