@@ -36,9 +36,24 @@ function obtenerContenido(){
 function generarMarcadoHTML( datos ){
 
 	// let datos = [3, 45, 6 ];
-	datos.forEach( (materia) => {
 
+	let html = "<div>";
+
+	datos.forEach( (materia) => {
 		console.log(materia);
+
+		html += `<h1> ${materia.curso} </h1>`;
+
+		html += "<ul>"
+		materia.contenido.forEach( ( silabo, index ) => {
+			console.log(index);
+			html += ` <li> <a href="${silabo.enlace}" target="_blank"> ${silabo.sesion} </a> </li>`;
+		} )
+		html += "</ul>"
 	})
+
+	html += "</div>";
+
+	console.log(html);
 	
 }
