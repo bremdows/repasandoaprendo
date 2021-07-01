@@ -2,9 +2,75 @@
 document.addEventListener('DOMContentLoaded', () => {
 	console.log("El documento esta listo para ejecutar código JS");
 
-	obtenerContenido();
-	generarContenido();
+
+	
+
+	// obtenerContenido();
+	// generarContenido();
+	cambiarColor();
+	abrirColores();
+	cerrarColores();
 })
+
+
+function cambiarColor(){
+	let styles = getComputedStyle (document.documentElement);
+
+	// RECUPERAR EL VALOR DE UNA VARIABLE CSS
+	let bgValue = String (styles.getPropertyValue ('--colorPrimario')).trim();
+	console.log(bgValue)
+	
+
+	// ASIGNANDO VALOR A UNA VARIABLE CSS
+	// document.documentElement.style.setProperty ('--colorPrimario', '#FDA403');
+
+
+	// * RECUPERAR LA CANTIDA DE COLORES DISPONIBLES
+
+	let cantidadColores;
+
+	cantidadColores = document.querySelectorAll(".colores");
+	cantidadColores.forEach( (color) => {
+
+		color.addEventListener('click', () => {
+			let primario,
+				secundario
+
+			primario = color.dataset.primario;
+			secundario = color.dataset.secundario;
+
+			// * ASIGNAR EL VALOR DE LOS COLORES PRIMARIOS A NUESTRAS VARIABLE CSS GLOBALES
+
+			document.documentElement.style.setProperty('--colorPrimario', primario);
+			document.documentElement.style.setProperty('--colorSecundario', secundario);
+
+		})
+
+	})
+}
+
+function abrirColores(){
+	let btnAbrir,
+		contenedorColores;
+	contenedorColores = document.querySelector(".cambiar-color");
+	btnAbrir = document.getElementById("mostrar-colores");
+
+	btnAbrir.addEventListener('click', () => {
+		contenedorColores.classList.add('activado');
+		btnAbrir.classList.add('activado');
+	})
+}
+
+function cerrarColores(){
+	let btnCerrar = document.getElementById("ocultar-colores"),
+		contenedorColores = document.querySelector(".cambiar-color"),
+		btnAbrir = document.getElementById("mostrar-colores");
+
+	btnCerrar.addEventListener('click', () => {
+		contenedorColores.classList.remove('activado')
+		btnAbrir.classList.remove('activado')
+	})
+}
 
 function generarContenido(){
 	let enlaces,
@@ -57,3 +123,5 @@ function generarMarcadoHTML( datos ){
 	console.log(html);
 	
 }
+
+
