@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	cambiarColor();
 	abrirColores();
 	cerrarColores();
+	enlacesNuevaVentana();
 })
 
 
@@ -72,17 +73,14 @@ function cerrarColores(){
 	})
 }
 
-function generarContenido(){
+function enlacesNuevaVentana(){
 	let enlaces,
 		contador; 
 	enlaces = document.querySelectorAll("a");
-	contador = 0;
 
 	enlaces.forEach( (enlace) => {
 		enlace.setAttribute("target", "_blank");
 	});
-
-	console.log(contador);
 }
 
 
