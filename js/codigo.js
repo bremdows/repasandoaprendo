@@ -2,6 +2,15 @@
 document.addEventListener('DOMContentLoaded', () => {
 	console.log("El documento esta listo para ejecutar código JS");
 
+	if( existeValorLocalStorage() ){
+		document.documentElement.style.setProperty('--colorPrimario', localPrimario);
+		document.documentElement.style.setProperty('--colorSecundario', localSecundario);
+	}else{
+		let styles = getComputedStyle (document.documentElement);
+		localPrimario = String (styles.getPropertyValue ('--colorPrimario')).trim();
+		localSecundario = String (styles.getPropertyValue ('--colorSecundario')).trim();
+	}
+
 
 	
 
@@ -13,20 +22,26 @@ document.addEventListener('DOMContentLoaded', () => {
 	enlacesNuevaVentana();
 })
 
+// * VARIABLES GLOBALES
+
+let localPrimario,
+	localSecundario;
+
+	localPrimario = localStorage.getItem("primario");
+	localSecundario = localStorage.getItem("secundario");
+
+// * DECLARACIÓN DE LAS FUNCIONES 
 
 function cambiarColor(){
 	let styles = getComputedStyle (document.documentElement);
 
 	// RECUPERAR EL VALOR DE UNA VARIABLE CSS
 	let bgValue = String (styles.getPropertyValue ('--colorPrimario')).trim();
-	console.log(bgValue)
+	// console.log(bgValue)
 	
 
 	// ASIGNANDO VALOR A UNA VARIABLE CSS
 	// document.documentElement.style.setProperty ('--colorPrimario', '#FDA403');
-
-
-	// * RECUPERAR LA CANTIDA DE COLORES DISPONIBLES
 
 	let cantidadColores;
 
@@ -45,10 +60,30 @@ function cambiarColor(){
 			document.documentElement.style.setProperty('--colorPrimario', primario);
 			document.documentElement.style.setProperty('--colorSecundario', secundario);
 
+
+			// * APLICANDO LOCAL STORAGE PARA MANTENER EL CAMBIO DE COLOR EN LA APLICACIÓN (ESTE TIPO DE ALMACENAMIENTO ES POR SESIONES)
+
+			// * GUARDA LOS VALORES HEXADECIMALES DE LOS COLORES EN EL localStorage, TAMBIÉN ACTUALIZA LOS VALORES
+			localStorage.setItem("primario", primario)
+			localStorage.setItem("secundario", secundario)
+
 		})
 
 	})
+
 }
+
+	// * RECUPERAR LOS VALORES HEXADECIMALES DE LOS COLORES DEL LOCALSTORAGE
+
+function existeValorLocalStorage(){
+
+	if( localPrimario == null && localSecundario == null)
+		return false
+	else
+		return true
+}
+
+
 
 function abrirColores(){
 	let btnAbrir,
@@ -121,5 +156,7 @@ function generarMarcadoHTML( datos ){
 	console.log(html);
 	
 }
+
+
 
 
