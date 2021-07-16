@@ -1,7 +1,6 @@
 [
 	{
-		"curso": "Cálculo",
-		"contenido": [
+		"calculoi": [
 			{
 				"unidad": "Primera Unidad",
 				"sesion": "Introducción a los limites",
@@ -141,51 +140,6 @@
 				"unidad": "Tercera Unidad",
 				"sesion": "Sesión X",
 				"enlace": "https://drive.google.com/file/d/1xnpk5Zbj1icDnEtaZlYZq3sjQ9-LIc6q/view?usp=sharing"
-			}
-		]
-	},
-	{
-		"curso": "Física II",
-		"contenido": [
-			{
-				"unidad": "Primera Unidad",
-				"sesion": "Introducción",
-				"enlace": "https://drive.google.com/file/d/1La5GlnwI4gKsV04BNuhjoXj0I6bx6Bks/view?usp=sharing"
-			},
-			{
-				"unidad": "Primera Unidad",
-				"sesion": "Esfuerzo y Deformaciones",
-				"enlace": "https://drive.google.com/file/d/1qMiHNxp7my-rAOLZuJq5goaTBwFddzcV/view?usp=sharing"
-			},
-			{
-				"unidad": "Primera Unidad",
-				"sesion": "Presión",
-				"enlace": "https://drive.google.com/file/d/1UzqeEdAFy654uRK035CzcK6S-Zkhtbb2/view?usp=sharing"
-			},
-			{
-				"unidad": "Primera Unidad",
-				"sesion": "Deformación Elasticidad",
-				"enlace": "https://drive.google.com/file/d/1yUpq2xz2n2m3iJznvZeCv1T5ixjXwkhZ/view?usp=sharing"
-			},
-			{
-				"unidad": "Primera Unidad",
-				"sesion": "Sesión V",
-				"enlace": ""
-			},
-			{
-				"unidad": "Segunda Unidad",
-				"sesion": "Sesión VI - Parte I",
-				"enlace": ""
-			},
-			{
-				"unidad": "Segunda Unidad",
-				"sesion": "Sesión VI - Parte II",
-				"enlace": ""
-			},
-			{
-				"unidad": "Segunda Unidad",
-				"sesion": "Sesión VII",
-				"enlace": ""
 			}
 		]
 	}
