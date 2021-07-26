@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	
 
-	// obtenerContenido();
-	// generarContenido();
+	obtenerContenido();
+
 	cambiarColor();
 	abrirColores();
 	cerrarColores();
@@ -135,7 +135,6 @@ function obtenerContenido(){
 function generarMarcadoHTML( datos ){
 
 	// let datos = [3, 45, 6 ];
-
 	let html = "<div>";
 
 	datos.forEach( (materia) => {
@@ -157,6 +156,10 @@ function generarMarcadoHTML( datos ){
 	
 }
 
+function filtrarCurso(she says i the one :v){
+
+}
 
 
 
+// * ENTONCES QUE SE PASE POR MEDIO UN ARGUMENTO EL CURSO QUE SE QUIERE CARGA DENTRO DEL HTML, DE FORMA QUE SE REDUCE DE FORMA SIGNIFICATIVA EL MARCADO HTML ESCRITO MANUALMENTE
